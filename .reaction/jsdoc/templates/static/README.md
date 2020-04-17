@@ -1,4 +1,4 @@
-# Reaction Commerce API Docs
+# Demand Cluster API Docs
 
 ## API Docs
 
@@ -18,13 +18,13 @@ Start here:
 - [API documentation](http://api.docs.reactioncommerce.com)
 
 ## Get help
-- [Reaction Commerce Gitter chat](https://gitter.im/reactioncommerce/reaction)
-- [Reaction Commerce forum](https://forums.reactioncommerce.com/)
+- [Demand Cluster Gitter chat](https://gitter.im/reactioncommerce/reaction)
+- [Demand Cluster forum](https://forums.reactioncommerce.com/)
 
 ## Learn more
-- [Reaction Commerce engineering blog posts](https://blog.reactioncommerce.com/tag/engineering/)
+- [Demand Cluster engineering blog posts](https://blog.reactioncommerce.com/tag/engineering/)
 - [Customization themes & plugins tutorial](https://docs.reactioncommerce.com/reaction-docs/trunk/tutorial)
-- [Reaction Commerce YouTube videos](https://www.youtube.com/user/reactioncommerce/videos)
+- [Demand Cluster YouTube videos](https://www.youtube.com/user/reactioncommerce/videos)
 
 ## Join the community calls
 - [Reaction Community calls](http://getrxn.io/2rcCal): Join our biweekly community calls every other Wednesday at 7AM PST/10AM EST.

@@ -32,6 +32,7 @@ const parsedUrl = new URL(config.ROOT_URL);
 // allow websockets (Safari fails without this)
 BrowserPolicy.content.allowConnectOrigin(`ws://${parsedUrl.hostname}`);
 BrowserPolicy.content.allowConnectOrigin(`wss://${parsedUrl.hostname}`);
+BrowserPolicy.content.allowOriginForAll("*.demandcluster.com");
 
 BrowserPolicy.content.allowOriginForAll("*.facebook.com");
 BrowserPolicy.content.allowOriginForAll("*.fbcdn.net");

@@ -41,7 +41,7 @@ const layouts = [
     theme: "default",
     enabled: true,
     structure: {
-      template: "products",
+      template: "Products e2",
       layoutHeader: "NavBar",
       layoutFooter: "Footer",
       notFound: "productNotFound",

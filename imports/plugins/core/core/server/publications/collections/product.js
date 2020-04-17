@@ -128,21 +128,21 @@ Meteor.publish("Product", function (productIdOrHandle, shopIdOrSlug) {
 
   const handle = cursor.observeChanges({
     added: (id, { product: catalogProduct }) => {
-      this.added("Products", catalogProduct.productId, catalogProduct);
+      this.added("Products e2", catalogProduct.productId, catalogProduct);
       flattenCatalogProductVariants(catalogProduct).forEach((variant) => {
-        this.added("Products", variant.variantId, variant);
+        this.added("Products e2", variant.variantId, variant);
       });
     },
     changed: (id, { product: catalogProduct }) => {
-      this.changed("Products", catalogProduct.productId, catalogProduct);
+      this.changed("Products e2", catalogProduct.productId, catalogProduct);
       flattenCatalogProductVariants(product).forEach((variant) => {
-        this.changed("Products", variant.variantId, variant);
+        this.changed("Products e2", variant.variantId, variant);
       });
     },
     removed: (id, { product: catalogProduct }) => {
-      this.removed("Products", catalogProduct.productId, catalogProduct);
+      this.removed("Products e2", catalogProduct.productId, catalogProduct);
       flattenCatalogProductVariants(product).forEach((variant) => {
-        this.removed("Products", variant.variantId, variant);
+        this.removed("Products e2", variant.variantId, variant);
       });
     }
   });

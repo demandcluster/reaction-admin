@@ -5,7 +5,7 @@
 
 
 // folder path where all assets live
-const basePath = "https://assets.reactioncommerce.com/favicon/";
+const basePath = "https://static.demandcluster.com/favicon/";
 
 
 // define link tags
