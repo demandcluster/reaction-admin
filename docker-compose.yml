@@ -6,19 +6,33 @@
 
 version: '3.4'
 
+
 networks:
-  reaction:
-    external:
-      name: reaction.localhost
+  proxy:
+    external: true
+  internal:
+    external: 
+      name: demandjs.localhost
 
 services:
-  reaction-admin:
+  demandcluster-backend:
     image: reactioncommerce/admin:3.0.0-beta.6
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.demandcluster-backend.rule=Host(`backend.demandcluster.com`)"
+      - "traefik.http.routers.demandcluster-backend.tls=true"
+      - "traefik.http.routers.demandcluster-backend.entrypoints=websecure"
+      - "traefik.http.routers.demandcluster-backend.service=backend-service"
+      - "traefik.http.services.backend-service.loadbalancer.server.port=4080"
+      - "traefik.docker.network=proxy"
+
     env_file:
       - ./.env
     networks:
-      default:
-      reaction:
+      internal:
+      proxy:
     ports:
       - "4080:4080"
       - "9231:9229"
+
+
