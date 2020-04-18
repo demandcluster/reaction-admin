@@ -159,7 +159,7 @@ function Sidebar(props) {
   return (
     <Drawer {...drawerProps}>
       <AppBar
-        color="secondary"
+        color="primary"
         elevation={0}
         position="sticky"
       >
