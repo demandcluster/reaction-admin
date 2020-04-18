@@ -8,12 +8,12 @@
   },
   "homepage": "https://github.com/reactioncommerce/reaction-admin",
   "url": "https://github.com/reactioncommerce/reaction-admin",
-  "email": "reaction@reactioncommerce.com",
+  "email": "reaction@demandcluster.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/reactioncommerce/reaction-admin.git"
   },
-  "author": "Demand Cluster <hello@reactioncommerce.com>",
+  "author": "Demand Cluster <hello@demandcluster.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/reactioncommerce/reaction-admin/issues"

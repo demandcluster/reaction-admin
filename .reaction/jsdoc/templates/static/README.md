@@ -11,19 +11,19 @@ Start here:
 
 ## More developer tools
 
-- [Reaction React Component Style Guide](https://styleguide.reactioncommerce.com/)
+- [Reaction React Component Style Guide](https://styleguide.demandcluster.com/)
 - [Reaction GraphQL API server base](https://github.com/reactioncommerce/reaction-api-base)
 - [Reaction sample data](https://github.com/reactioncommerce/reaction-sample-data)
-- [Developer documentation](https://docs.reactioncommerce.com)
-- [API documentation](http://api.docs.reactioncommerce.com)
+- [Developer documentation](https://docs.demandcluster.com)
+- [API documentation](http://api.docs.demandcluster.com)
 
 ## Get help
 - [Demand Cluster Gitter chat](https://gitter.im/reactioncommerce/reaction)
-- [Demand Cluster forum](https://forums.reactioncommerce.com/)
+- [Demand Cluster forum](https://forums.demandcluster.com/)
 
 ## Learn more
-- [Demand Cluster engineering blog posts](https://blog.reactioncommerce.com/tag/engineering/)
-- [Customization themes & plugins tutorial](https://docs.reactioncommerce.com/reaction-docs/trunk/tutorial)
+- [Demand Cluster engineering blog posts](https://blog.demandcluster.com/tag/engineering/)
+- [Customization themes & plugins tutorial](https://docs.demandcluster.com/reaction-docs/trunk/tutorial)
 - [Demand Cluster YouTube videos](https://www.youtube.com/user/reactioncommerce/videos)
 
 ## Join the community calls

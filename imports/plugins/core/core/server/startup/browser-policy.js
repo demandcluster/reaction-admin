@@ -8,7 +8,7 @@ import config from "../config.js";
  */
 WebApp.rawConnectHandlers.use((req, res, next) => {
   if (req._parsedUrl.pathname.match(/\.(ttf|ttc|otf|eot|woff|svg|font\.css|css)$/)) {
-    res.setHeader("Access-Control-Allow-Origin", "assets.reactioncommerce.com");
+    res.setHeader("Access-Control-Allow-Origin", "assets.demandcluster.com");
   }
   next();
 });
@@ -45,7 +45,7 @@ BrowserPolicy.content.allowImageOrigin("secure.gravatar.com");
 BrowserPolicy.content.allowImageOrigin("i0.wp.com");
 
 BrowserPolicy.content.allowFontDataUrl();
-BrowserPolicy.content.allowOriginForAll("assets.reactioncommerce.com");
+BrowserPolicy.content.allowOriginForAll("assets.demandcluster.com");
 BrowserPolicy.content.allowOriginForAll("cdnjs.cloudflare.com");
 BrowserPolicy.content.allowOriginForAll("fonts.googleapis.com");
 BrowserPolicy.content.allowOriginForAll("fonts.gstatic.com");

@@ -8,9 +8,9 @@ Diversity is one of our huge strengths, but it can also lead to communication is
 
 This isn’t an exhaustive list of things that you can’t do. Rather, take it in the spirit in which it’s intended - a guide to make it easier to enrich all of us and the broader communities in which we participate.
 
-This code of conduct applies to all spaces managed by Demand Cluster. This includes our [development chat room](https://gitter.im/reactioncommerce/reaction), [forums](https://forums.reactioncommerce.com), [blog](https://blog.reactioncommerce.com), mailing lists, [issue tracker](https://github.com/reactioncommerce/reaction/issues), [project boards](https://github.com/reactioncommerce/reaction/projects), Reaction events and meetups, and any other forums or service created by the core project team which the community uses for communication. In addition, violations of this code outside these spaces may affect a person's ability to participate within them.
+This code of conduct applies to all spaces managed by Demand Cluster. This includes our [development chat room](https://gitter.im/reactioncommerce/reaction), [forums](https://forums.demandcluster.com), [blog](https://blog.demandcluster.com), mailing lists, [issue tracker](https://github.com/reactioncommerce/reaction/issues), [project boards](https://github.com/reactioncommerce/reaction/projects), Reaction events and meetups, and any other forums or service created by the core project team which the community uses for communication. In addition, violations of this code outside these spaces may affect a person's ability to participate within them.
 
-If you believe someone is violating the code of conduct, we ask that you report it by emailing <mailto:conduct@reactioncommerce.com>. For more details, please see our [Reporting Guidelines](https://docs.reactioncommerce.com/reaction-docs/trunk/reporting-guide).
+If you believe someone is violating the code of conduct, we ask that you report it by emailing <mailto:conduct@demandcluster.com>. For more details, please see our [Reporting Guidelines](https://docs.demandcluster.com/reaction-docs/trunk/reporting-guide).
 
 -   **Be friendly and patient.**
 
@@ -35,4 +35,4 @@ If you believe someone is violating the code of conduct, we ask that you report 
 
 ## Questions?
 
-If you have questions, please see the [FAQs](https://docs.reactioncommerce.com/reaction-docs/trunk/guideline-faqs). If that doesn't answer your questions, feel free to [contact us](mailto:hello@reactioncommerce.com).
+If you have questions, please see the [FAQs](https://docs.demandcluster.com/reaction-docs/trunk/guideline-faqs). If that doesn't answer your questions, feel free to [contact us](mailto:hello@demandcluster.com).

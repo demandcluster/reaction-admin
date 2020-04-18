@@ -2,7 +2,7 @@
 
 [![Circle CI](https://circleci.com/gh/reactioncommerce/reaction-admin.svg?style=svg)](https://circleci.com/gh/reactioncommerce/reaction-admin) [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[Reaction](http://reactioncommerce.com) is an API-first, headless commerce platform built using Node.js, React, and GraphQL. It plays nicely with npm, Docker and Kubernetes.
+[Reaction](http://demandcluster.com) is an API-first, headless commerce platform built using Node.js, React, and GraphQL. It plays nicely with npm, Docker and Kubernetes.
 
 This project, Demand Admin, is the user interface used by administrators and shop managers.
 
@@ -10,24 +10,24 @@ This project, Demand Admin, is the user interface used by administrators and sho
 
 # Getting started
 
-Follow the documentation to install Reaction with [Reaction Platform](https://docs.reactioncommerce.com/docs/installation-reaction-platform) for all supported operating systems.
+Follow the documentation to install Reaction with [Reaction Platform](https://docs.demandcluster.com/docs/installation-reaction-platform) for all supported operating systems.
 
 # Get involved
 
 ## Tutorials, docs & developer tools
 
-- [Developer documentation](https://docs.reactioncommerce.com)
-- [Docs: Introduction to Reaction:  Concepts](https://docs.reactioncommerce.com/docs/concepts-intro)
-- [Swag Shop Tutorial](https://docs.reactioncommerce.com/docs/swag-shop-1)
-- [Storefront UI Development Tutorial](https://docs.reactioncommerce.com/docs/storefront-intro)
-- [Storefront Component Library](http://designsystem.reactioncommerce.com/)
-- [API documentation](http://api.docs.reactioncommerce.com)
-- [Engineering blog posts](https://blog.reactioncommerce.com/tag/engineering/)
+- [Developer documentation](https://docs.demandcluster.com)
+- [Docs: Introduction to Reaction:  Concepts](https://docs.demandcluster.com/docs/concepts-intro)
+- [Swag Shop Tutorial](https://docs.demandcluster.com/docs/swag-shop-1)
+- [Storefront UI Development Tutorial](https://docs.demandcluster.com/docs/storefront-intro)
+- [Storefront Component Library](http://designsystem.demandcluster.com/)
+- [API documentation](http://api.docs.demandcluster.com)
+- [Engineering blog posts](https://blog.demandcluster.com/tag/engineering/)
 
 ## Get help & contact the team
 
 - [Gitter chat](https://gitter.im/reactioncommerce/reaction)
-- Report security vulnerabilities to <mailto:security@reactioncommerce.com>: [Security reporting instructions](https://docs.reactioncommerce.com/reaction-docs/trunk/reporting-vulnerabilities)
+- Report security vulnerabilities to <mailto:security@demandcluster.com>: [Security reporting instructions](https://docs.demandcluster.com/reaction-docs/trunk/reporting-vulnerabilities)
 - Request features in this [repository](https://github.com/reactioncommerce/reaction-feature-requests/)
 
 ## Contribute
@@ -43,15 +43,15 @@ We love your pull requests! Check our our [`Good First Issue`](https://github.co
 ### Pull Request guidelines
 Pull requests should pass all automated tests, style, and security checks.
 
-Your code should pass all [acceptance tests and unit tests](https://docs.reactioncommerce.com/reaction-docs/trunk/testing-reaction). Run `docker-compose run --rm reaction npm run test` to run the test suites in containers. If you're adding functionality to Reaction, you should add tests for the added functionality.
+Your code should pass all [acceptance tests and unit tests](https://docs.demandcluster.com/reaction-docs/trunk/testing-reaction). Run `docker-compose run --rm reaction npm run test` to run the test suites in containers. If you're adding functionality to Reaction, you should add tests for the added functionality.
 
 We require that all code contributed to Reaction follows [Reaction's ESLint rules](https://github.com/reactioncommerce/reaction-eslint-config). You can run `docker-compose run --rm reaction npm run lint` to run ESLint against your code locally.
 
-Please follow the [Reaction Code Style Guide](https://docs.reactioncommerce.com/docs/styleguide). Check out our guides to [JSDoc](https://docs.reactioncommerce.com/docs/jsdoc-style-guide), [Git](https://docs.reactioncommerce.com/docs/git-style-guide), [error handling](https://docs.reactioncommerce.com/docs/error-handling-guide), [logging](https://docs.reactioncommerce.com/docs/logging), and [React](https://docs.reactioncommerce.com/docs/react-best-practices).
+Please follow the [Reaction Code Style Guide](https://docs.demandcluster.com/docs/styleguide). Check out our guides to [JSDoc](https://docs.demandcluster.com/docs/jsdoc-style-guide), [Git](https://docs.demandcluster.com/docs/git-style-guide), [error handling](https://docs.demandcluster.com/docs/error-handling-guide), [logging](https://docs.demandcluster.com/docs/logging), and [React](https://docs.demandcluster.com/docs/react-best-practices).
 
-We also request that you follow the our [pull request template](https://docs.reactioncommerce.com/docs/contributing-to-reaction#fill-out-the-pull-request-template)
+We also request that you follow the our [pull request template](https://docs.demandcluster.com/docs/contributing-to-reaction#fill-out-the-pull-request-template)
 
-Get more details in our [Contributing Guide](https://docs.reactioncommerce.com/docs/contributing-to-reaction).
+Get more details in our [Contributing Guide](https://docs.demandcluster.com/docs/contributing-to-reaction).
 
 ### Developer Certificate of Origin
 We use the [Developer Certificate of Origin (DCO)](https://developercertificate.org/) in lieu of a Contributor License Agreement for all contributions to Demand Cluster open source projects. We request that contributors agree to the terms of the DCO and indicate that agreement by signing-off all commits made to Demand Cluster projects by adding a line with your name and email address to every Git commit message contributed:
