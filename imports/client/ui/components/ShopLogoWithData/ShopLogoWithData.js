@@ -38,10 +38,11 @@ const styles = (theme) => ({
     marginRight: theme.spacing(2)
   },
   logoName: {
-    "font-family": "Myria Pro BoldIt"
+    color: theme.palette.colors.black15,
+    fontFamily: "Myria Pro BoldIt"
   },
   logoName1:{
-    "font-size": "26px",
+    fontSize: "26px",
     color: "rgb(85, 99, 131)"
   },
   logoName2:{
