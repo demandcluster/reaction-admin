@@ -16,7 +16,7 @@ networks:
 
 services:
   demandcluster-backend:
-    image: reactioncommerce/admin:3.0.0-beta.6
+    image: repo.treescale.com/demandjs/backend:0.2
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.demandcluster-backend.rule=Host(`backend.demandcluster.com`)"
