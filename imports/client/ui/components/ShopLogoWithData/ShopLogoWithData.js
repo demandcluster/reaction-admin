@@ -11,7 +11,7 @@ import { withComponents } from "@reactioncommerce/components-context";
 import withPrimaryShopId from "/imports/plugins/core/graphql/lib/hocs/withPrimaryShopId";
 import GenericErrorBoundary from "../GenericErrorBoundary";
 
-const defaultLogo = "/resources/demand-logo-circular.svg";
+const defaultLogo = "/resources/demand.svg";
 
 const getShop = gql`
   query getShop($id: ID!) {
@@ -38,16 +38,9 @@ const styles = (theme) => ({
     marginRight: theme.spacing(2)
   },
   logoName: {
-    color: theme.palette.colors.black15,
-    fontFamily: "Myria Pro BoldIt"
-  },
-  logoName1:{
-    fontSize: "26px",
-    color: "rgb(85, 99, 131)"
-  },
-  logoName2:{
-    color: "rgb(36, 148, 236)"
+    color: theme.palette.colors.demandBlue500
   }
+
 });
 
 /**
@@ -74,8 +67,7 @@ function ShopLogoWithData({ className, classes, shopId, shouldShowShopName, link
             component="span"
             className={classes.logoName}
           >
-          <span className={classes.logoName1}>Demand</span>
-          <span className={classes.logoName2}>Cluster</span>
+          DemandCluster
           </Typography>
         }
       </Link>
@@ -109,9 +101,7 @@ function ShopLogoWithData({ className, classes, shopId, shouldShowShopName, link
                     component="span"
                     className={classes.logoName}
                   >
-                  <span className={classes.logoName1}>Demand</span>
-                  <span className={classes.logoName2}>Cluster</span>
-                  <div>{shop.name}</div>
+                    {shop.name}
                   </Typography>
                 }
               </Link>

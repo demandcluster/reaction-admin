@@ -15,11 +15,15 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import CloseIcon from "mdi-material-ui/Close";
 import { Translation } from "/imports/plugins/core/ui/client/components";
 import useIsAppLoading from "/imports/client/ui/hooks/useIsAppLoading.js";
+import { Typography } from "@material-ui/core";
 import useCurrentShopId from "../../hooks/useCurrentShopId";
 import ShopLogoWithData from "../ShopLogoWithData";
 import useOperatorRoutes from "../../hooks/useOperatorRoutes";
 
 const activeClassName = "nav-item-active";
+
+const defaultLogo = "/resources/demand.svg";
+
 
 const styles = (theme) => ({
   closeButton: {

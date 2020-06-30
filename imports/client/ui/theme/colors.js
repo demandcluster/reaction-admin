@@ -44,6 +44,7 @@ export default {
   coolGrey100: "#e3ebf0",
   coolGrey200: "#d5d5d5",
   coolGrey300: "#5d8ea9",
+  coolDemand300: "#45c1f1",
   coolGrey400: "#3c5d6f",
   coolGrey500: "#3c3c3c",
   coolGrey600: "#1d1d1d",
@@ -71,9 +72,11 @@ export default {
   darkBlue200: "#c4d3da",
   darkBlue300: "#135471",
   darkBlue400: "#103a4d",
-  darkBlue500: "#333f45",
+  darkBlue500: "#274093",
+  demandBlue500: "#274093",
+  darkBlue550: "#333f45",
   darkBlue600: "#242c30",
-
+  // .cls-1{fill:#274093;}.cls-2{fill:#45c1f1;}
   // support colors
   yellow: "#efc95f",
   yellow100: "#fcf3dc",
