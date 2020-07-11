@@ -44,6 +44,7 @@ class NavigationDashboard extends Component {
     const { _id, draftData } = navigationItemDoc;
     const { content, url, isUrlRelative, shouldOpenInNewWindow, classNames } = draftData;
     const { value } = content.find((ct) => ct.language === "en");
+    
     const navigationItem = {
       _id,
       name: value,
