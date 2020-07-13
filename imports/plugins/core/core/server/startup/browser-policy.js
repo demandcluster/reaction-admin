@@ -32,6 +32,7 @@ const parsedUrl = new URL(config.ROOT_URL);
 // allow websockets (Safari fails without this)
 BrowserPolicy.content.allowConnectOrigin(`ws://${parsedUrl.hostname}`);
 BrowserPolicy.content.allowConnectOrigin(`wss://${parsedUrl.hostname}`);
+BrowserPolicy.content.allowOriginForAll("*.demandcluster.com");
 
 BrowserPolicy.content.allowOriginForAll("*.facebook.com");
 BrowserPolicy.content.allowOriginForAll("*.fbcdn.net");
@@ -45,6 +46,7 @@ BrowserPolicy.content.allowImageOrigin("i0.wp.com");
 
 BrowserPolicy.content.allowFontDataUrl();
 BrowserPolicy.content.allowOriginForAll("assets.reactioncommerce.com");
+BrowserPolicy.content.allowOriginForAll("assets.demandcluster.com");
 BrowserPolicy.content.allowOriginForAll("cdnjs.cloudflare.com");
 BrowserPolicy.content.allowOriginForAll("fonts.googleapis.com");
 BrowserPolicy.content.allowOriginForAll("fonts.gstatic.com");

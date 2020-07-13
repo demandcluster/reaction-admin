@@ -43,12 +43,12 @@ function ProductMediaItem(props) {
   const [priority, setPriority] = useState(source.priority);
 
   let imageSrc = source.URLs[size];
-
+  
   // If there is no img src, then render nothing
   if (imageSrc === String(null)) return null;
 
   if (imageSrc) {
-    imageSrc = `${filesBaseUrl}${imageSrc}`;
+    imageSrc = `${imageSrc}`;
   } else {
     imageSrc = defaultSource;
   }

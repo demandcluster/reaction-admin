@@ -47,7 +47,7 @@ export default envalid.cleanEnv(process.env, {
     example: "1574809954951"
   }),
   ROOT_URL: str({
-    desc: "The canonical root URL for the Reaction Admin server",
+    desc: "The canonical root URL for the Demand Admin server",
     example: "http://localhost:4080"
   })
 });

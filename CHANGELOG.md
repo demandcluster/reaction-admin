@@ -1,6 +1,23 @@
+# v3.0.0-beta.7
+
+This is the seventh beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+
+### Refactors
+
+refactor: de-meteorize discount codes view ([#255](http://github.com/reactioncommerce/reaction-admin/pull/255))
+
+### Fixes
+
+fix: navigation tree not showing up ([#278](http://github.com/reactioncommerce/reaction-admin/pull/278))
+fix: use network-only fetchPolicy for tag table ([#254](http://github.com/reactioncommerce/reaction-admin/pull/254))
+
+## Contributors
+
+Thanks to @loan-laux for contributing to this release! 🎉
+
 # v3.0.0-beta.6
 
-This is the sixth beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+This is the sixth beta release of the Demand Admin project that is designed to work with our new Reaction API.
 
 ### Features
 
@@ -23,7 +40,7 @@ This is the sixth beta release of the Reaction Admin project that is designed to
 
 # v3.0.0-beta.5
 
-This is the fifth beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+This is the fifth beta release of the Demand Admin project that is designed to work with our new Reaction API.
 
 ### Fixes
 
@@ -31,7 +48,7 @@ This is the fifth beta release of the Reaction Admin project that is designed to
 
 # v3.0.0-beta.4
 
-This is the fourth beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+This is the fourth beta release of the Demand Admin project that is designed to work with our new Reaction API.
 
 *Reaction releases will no longer be coordinated across all projects - we'll release each project, independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together. This change has two exceptions: we will release all projects in coordination for a `beta` release, and all projects in coordination for the official `v3.0.0` release.*
 
@@ -43,7 +60,7 @@ This is the fourth beta release of the Reaction Admin project that is designed t
 
 # v3.0.0-beta.3
 
-This is the third beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+This is the third beta release of the Demand Admin project that is designed to work with our new Reaction API.
 
 *Reaction releases will no longer be coordinated across all projects - we'll release each project, independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together. This change has two exceptions: we will release all projects in coordination for a `beta` release, and all projects in coordination for the official `v3.0.0` release.*
 
@@ -57,7 +74,7 @@ This is the third beta release of the Reaction Admin project that is designed to
 
 # v3.0.0-beta.2
 
-This is the second beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+This is the second beta release of the Demand Admin project that is designed to work with our new Reaction API.
 
 *Reaction releases will no longer be coordinated across all projects - we'll release each project, independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together. This change has two exceptions: we will release all projects in coordination for a `beta` release, and all projects in coordination for the official `v3.0.0` release.*
 
@@ -84,7 +101,7 @@ This is the second beta release of the Reaction Admin project that is designed t
 
 # v3.0.0-beta
 
-This is the beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+This is the beta release of the Demand Admin project that is designed to work with our new Reaction API.
 
 *Reaction releases will no longer be coordinated across all projects - we'll release each project, independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together. This change has two exceptions: we will release all projects in coordination for a `beta` release, and all projects in coordination for the official `v3.0.0` release.*
 

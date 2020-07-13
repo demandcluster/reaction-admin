@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Dialog, DialogContent } from "@material-ui/core";
 import Button from "@reactioncommerce/catalyst/Button";
-import HTML5Backend from "react-dnd-html5-backend";
-import { DragDropContext } from "react-dnd";
 import NavigationItemForm from "./NavigationItemForm";
 import NavigationTreeContainer from "./NavigationTreeContainer";
 import NavigationItemList from "./NavigationItemList";
@@ -46,6 +44,7 @@ class NavigationDashboard extends Component {
     const { _id, draftData } = navigationItemDoc;
     const { content, url, isUrlRelative, shouldOpenInNewWindow, classNames } = draftData;
     const { value } = content.find((ct) => ct.language === "en");
+    
     const navigationItem = {
       _id,
       name: value,
@@ -143,4 +142,4 @@ class NavigationDashboard extends Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(NavigationDashboard);
+export default NavigationDashboard;

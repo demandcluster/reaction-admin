@@ -8,6 +8,8 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
+const defaultLogo = "/resources/demand-logo-circular.svg";
+
 /**
  * @summary ProfileImageWithData React component
  * @param {Object} props React props
@@ -27,6 +29,12 @@ function ProfileImageWithData(props) {
 
   return (
     <Fragment>
+      <img
+        alt={"DemandCluster"}
+        src={defaultLogo}
+        width={"60px"}
+        style={{ paddingRight: "1em" }}
+      />
       <ButtonBase
         centerRipple
         onClick={(event) => {

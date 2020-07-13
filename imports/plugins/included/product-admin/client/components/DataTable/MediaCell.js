@@ -25,7 +25,7 @@ export default function MediaCell({ row }) {
 
   return (
     <img
-      src={`${filesBaseUrl}${thumbnailUrl}`}
+      src={`${thumbnailUrl}`}
       alt={row.values.title}
       width="36"
     />
