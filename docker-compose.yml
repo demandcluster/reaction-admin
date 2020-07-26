@@ -16,7 +16,7 @@ networks:
 
 services:
   demandcluster-backend:
-    image: reactioncommerce/admin:3.0.0-beta.6
+    image: docker.pkg.github.com/demandcluster/reaction-admin/admin:3.0.0-beta.7
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.demandcluster-backend.rule=Host(`backend.demandcluster.com`)"

@@ -150,8 +150,7 @@ function Sidebar(props) {
               <ListItemText
                 disableTypography
                 className={classes.listItemText}
-              >
-                <Translation defaultValue="" i18nKey={route.sidebarI18nLabel} />
+              ><Translation defaultValue="" i18nKey={route.sidebarI18nLabel} />
               </ListItemText>
             </ListItem>
           </NavLink>
