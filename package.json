@@ -145,6 +145,7 @@
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
+    "@reactioncommerce/api-utils": "^1.14.5",
     "@reactioncommerce/eslint-config": "^2.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.3",
@@ -175,6 +176,7 @@
     "jsdoc": "^3.6.3",
     "nock": "^9.6.1",
     "react-addons-test-utils": "15.6.2",
+    "remove": "^0.1.5",
     "snyk": "^1.217.3",
     "wait-for-expect": "^1.2.0"
   },
