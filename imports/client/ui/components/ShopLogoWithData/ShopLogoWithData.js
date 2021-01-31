@@ -1,11 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { compose } from "recompose";
-import classNames from "classnames";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import { Link } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { withComponents } from "@reactioncommerce/components-context";
 import withPrimaryShopId from "/imports/plugins/core/graphql/lib/hocs/withPrimaryShopId";
@@ -40,7 +37,6 @@ const styles = (theme) => ({
   logoName: {
     color: theme.palette.colors.demandBlue500
   }
-
 });
 
 /**
@@ -48,30 +44,9 @@ const styles = (theme) => ({
  * @param {Object} props Component props
  * @returns {Node} React component
  */
-function ShopLogoWithData({ className, classes, shopId, shouldShowShopName, linkTo, size }) {
+function ShopLogoWithData({ classes, shopId, size }) {
   if (!shopId) {
-    return (
-      <Link
-        className={classNames(classes.root, className)}
-        to={linkTo}
-      >
-        <img
-          alt="Demand Cluster"
-          className={classes.logo}
-          src={defaultLogo}
-          width={size}
-        />
-        {shouldShowShopName &&
-          <Typography
-            variant="h3"
-            component="span"
-            className={classes.logoName}
-          >
-          DemandCluster
-          </Typography>
-        }
-      </Link>
-    );
+    return <img alt="Reaction Commerce" className={classes.logo} src={defaultLogo} width={size} />;
   }
 
   return (
@@ -81,30 +56,17 @@ function ShopLogoWithData({ className, classes, shopId, shouldShowShopName, link
           if (loading) return null;
           if (data && data.shop) {
             const { shop } = data;
-            const customLogoFromUpload = shop.brandAssets && shop.brandAssets.navbarBrandImage && shop.brandAssets.navbarBrandImage.large;
+            const customLogoFromUpload =
+              shop.brandAssets && shop.brandAssets.navbarBrandImage && shop.brandAssets.navbarBrandImage.large;
             const customLogoFromUrlInput = shop.shopLogoUrls && shop.shopLogoUrls.primaryShopLogoUrl;
 
             return (
-              <Link
-                className={classNames(classes.root, className)}
-                to={linkTo}
-              >
-                <img
-                  alt={shop.name}
-                  className={classes.logo}
-                  src={customLogoFromUrlInput || customLogoFromUpload || defaultLogo}
-                  width={size}
-                />
-                {shouldShowShopName &&
-                  <Typography
-                    variant="h3"
-                    component="span"
-                    className={classes.logoName}
-                  >
-                    {shop.name}
-                  </Typography>
-                }
-              </Link>
+              <img
+                alt={shop.name}
+                className={classes.logo}
+                src={customLogoFromUrlInput || customLogoFromUpload || defaultLogo}
+                width={size}
+              />
             );
           }
 
@@ -117,17 +79,12 @@ function ShopLogoWithData({ className, classes, shopId, shouldShowShopName, link
 }
 
 ShopLogoWithData.propTypes = {
-  className: PropTypes.string,
   classes: PropTypes.object,
-  linkTo: PropTypes.string,
   shopId: PropTypes.string,
-  shouldShowShopName: PropTypes.bool,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 ShopLogoWithData.defaultProps = {
-  linkTo: "/",
-  shouldShowShopName: false,
   size: 60
 };
 

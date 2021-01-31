@@ -4,28 +4,18 @@
 #
 # See comment in docker-compose.dev.yml if you want to run for development.
 
-version: '3.4'
-
+version: "3.4"
 
 networks:
   proxy:
     external: true
   internal:
-    external: 
+    external:
       name: demandjs.localhost
 
 services:
-  demandcluster-backend:
-    image: docker.pkg.github.com/demandcluster/reaction-admin/admin:3.0.0-beta.7
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.demandcluster-backend.rule=Host(`backend.demandcluster.com`)"
-      - "traefik.http.routers.demandcluster-backend.tls=true"
-      - "traefik.http.routers.demandcluster-backend.entrypoints=websecure"
-      - "traefik.http.routers.demandcluster-backend.service=backend-service"
-      - "traefik.http.services.backend-service.loadbalancer.server.port=4080"
-      - "traefik.docker.network=proxy"
-
+  reaction-admin:
+    image: reactioncommerce/admin:3.0.0-beta.11
     env_file:
       - ./.env
     networks:
@@ -34,5 +24,3 @@ services:
     ports:
       - "4080:4080"
       - "9231:9229"
-
-

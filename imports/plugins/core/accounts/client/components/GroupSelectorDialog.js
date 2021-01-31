@@ -6,16 +6,7 @@ import Button from "@reactioncommerce/catalyst/Button";
 import Select from "@reactioncommerce/catalyst/Select";
 import { useMutation } from "@apollo/react-hooks";
 import { useSnackbar } from "notistack";
-import {
-  Box,
-  Grid,
-  CardActions,
-  CardHeader,
-  CardContent,
-  Dialog,
-  IconButton,
-  makeStyles
-} from "@material-ui/core";
+import { Box, Grid, CardActions, CardHeader, CardContent, Dialog, IconButton, makeStyles } from "@material-ui/core";
 import updateGroupsForAccountsMutation from "../graphql/mutations/updateGroupsForAccounts";
 
 const useStyles = makeStyles((theme) => ({
@@ -63,11 +54,13 @@ function GroupSelector({ isOpen, onClose, onSuccess, accounts, groups }) {
 
   // eslint-disable-next-line consistent-return
   const handleSubmit = async () => {
-    const groupIds = selectedGroups && selectedGroups.map(({ value }) => (value));
+    const groupIds = selectedGroups && selectedGroups.map(({ value }) => value);
 
     // Prevent user from executing action if they haven't yet selected at least one group
     if (!groupIds.length) {
-      return enqueueSnackbar(i18next.t("admin.accountsTable.groupSelectorDialog.invalidSelection"), { variant: "warning" });
+      return enqueueSnackbar(i18next.t("admin.accountsTable.groupSelectorDialog.invalidSelection"), {
+        variant: "warning"
+      });
     }
 
     setIsSubmitting(true);
@@ -89,7 +82,8 @@ function GroupSelector({ isOpen, onClose, onSuccess, accounts, groups }) {
   const groupsForSelect = groups.map((group) => ({ value: group._id, label: group.name }));
 
   const editingSingleAccount = Array.isArray(accounts) && accounts.length === 1;
-  const accountHasGroups = accounts[0] && accounts[0].groups && Array.isArray(accounts[0].groups.nodes) && accounts[0].groups.nodes.length > 0;
+  const accountHasGroups =
+    accounts[0] && accounts[0].groups && Array.isArray(accounts[0].groups.nodes) && accounts[0].groups.nodes.length > 0;
   const noGroupsSelected = selectedGroups && selectedGroups.length === 0;
 
   // If modifying one single account, pre-select groups that the account already belongs to
@@ -99,13 +93,7 @@ function GroupSelector({ isOpen, onClose, onSuccess, accounts, groups }) {
   }
 
   return (
-    <Dialog
-      open={isOpen}
-      onClose={onClose}
-      classes={{ root: classes.cardRoot }}
-      fullWidth
-      maxWidth="sm"
-    >
+    <Dialog open={isOpen} onClose={onClose} classes={{ root: classes.cardRoot }} fullWidth maxWidth="sm">
       <CardHeader
         action={
           <IconButton aria-label="close" onClick={onClose}>
@@ -129,20 +117,10 @@ function GroupSelector({ isOpen, onClose, onSuccess, accounts, groups }) {
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Box>
-          <Button
-            onClick={onClose}
-          >
-            {i18next.t("app.cancel")}
-          </Button>
+          <Button onClick={onClose}>{i18next.t("app.cancel")}</Button>
         </Box>
-        <Button
-          color="primary"
-          disabled={isSubmitting}
-          variant="contained"
-          onClick={handleSubmit}
-          type="submit"
-        >
-          {isSubmitting ? i18next.t("app.settings.saveProcessing") : i18next.t("app.saveChanges")}
+        <Button color="primary" disabled={isSubmitting} variant="contained" onClick={handleSubmit} type="submit">
+          {isSubmitting ? i18next.t("admin.settings.saveProcessing") : i18next.t("app.saveChanges")}
         </Button>
       </CardActions>
     </Dialog>

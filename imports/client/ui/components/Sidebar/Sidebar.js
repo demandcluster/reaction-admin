@@ -17,7 +17,7 @@ import { Translation } from "/imports/plugins/core/ui/client/components";
 import useIsAppLoading from "/imports/client/ui/hooks/useIsAppLoading.js";
 import { Typography } from "@material-ui/core";
 import useCurrentShopId from "../../hooks/useCurrentShopId";
-import ShopLogoWithData from "../ShopLogoWithData";
+import ShopSelectorWithData from "../ShopSelectorWithData";
 import useOperatorRoutes from "../../hooks/useOperatorRoutes";
 
 const activeClassName = "nav-item-active";
@@ -101,7 +101,8 @@ function Sidebar(props) {
     isMobile,
     isSidebarOpen,
     onDrawerClose,
-    setIsSettingsOpen
+    setIsSettingsOpen,
+    viewer
   } = props;
 
   const [isAppLoading] = useIsAppLoading();
@@ -136,7 +137,7 @@ function Sidebar(props) {
           <NavLink
             activeClassName={activeClassName}
             className={classes.link}
-            to={route.href || route.path}
+            to={(route.href || route.path).replace(":shopId", currentShopId)}
             key={route.path}
             onClick={() => {
               setIsSettingsOpen(false);
@@ -167,7 +168,12 @@ function Sidebar(props) {
         position="sticky"
       >
         <Toolbar className={classes.toolbar}>
-          <ShopLogoWithData className={classes.shopLogo} shouldShowShopName size={32} />
+          <ShopSelectorWithData
+            className={classes.shopLogo}
+            shouldShowShopName
+            size={32}
+            viewer={viewer}
+          />
 
           <Hidden mdUp>
             <Fab classes={{ root: classes.closeButton }} onClick={onDrawerClose} size="small">
@@ -190,7 +196,8 @@ Sidebar.propTypes = {
   isMobile: PropTypes.bool,
   isSidebarOpen: PropTypes.bool.isRequired,
   onDrawerClose: PropTypes.func.isRequired,
-  setIsSettingsOpen: PropTypes.func.isRequired
+  setIsSettingsOpen: PropTypes.func.isRequired,
+  viewer: PropTypes.object
 };
 
 Sidebar.defaultProps = {

@@ -10,16 +10,7 @@ import useReactoForm from "reacto-form/cjs/useReactoForm";
 import muiOptions from "reacto-form/cjs/muiOptions";
 import { useMutation } from "@apollo/react-hooks";
 import { useSnackbar } from "notistack";
-import {
-  Box,
-  Grid,
-  CardActions,
-  CardHeader,
-  CardContent,
-  Dialog,
-  IconButton,
-  makeStyles
-} from "@material-ui/core";
+import { Box, Grid, CardActions, CardHeader, CardContent, Dialog, IconButton, makeStyles } from "@material-ui/core";
 import useRoles from "../hooks/useRoles";
 import createGroupMutation from "../graphql/mutations/createGroup";
 import updateGroupMutation from "../graphql/mutations/updateGroup";
@@ -63,7 +54,9 @@ function CreateOrEditGroup({ isOpen, onClose, onSuccess, group, shopId }) {
 
   const { roles } = useRoles(shopId);
 
-  const [selectedRoles, setSelectedRoles] = useState(group ? group.permissions.map((role) => ({ label: role, value: role })) : []);
+  const [selectedRoles, setSelectedRoles] = useState(
+    group ? group.permissions.map((role) => ({ label: role, value: role })) : []
+  );
 
   let mutation = createGroupMutation;
 
@@ -92,13 +85,7 @@ function CreateOrEditGroup({ isOpen, onClose, onSuccess, group, shopId }) {
     groupIdVariable.groupId = group._id;
   }
 
-  const {
-    getFirstErrorMessage,
-    getInputProps,
-    hasErrors,
-    isDirty,
-    submitForm
-  } = useReactoForm({
+  const { getFirstErrorMessage, getInputProps, hasErrors, isDirty, submitForm } = useReactoForm({
     async onSubmit(formData) {
       setIsSubmitting(true);
 
@@ -133,13 +120,7 @@ function CreateOrEditGroup({ isOpen, onClose, onSuccess, group, shopId }) {
   const rolesForSelect = roles.map((role) => ({ value: role.name, label: role.name }));
 
   return (
-    <Dialog
-      classes={{ paper: classes.dialogPaper }}
-      open={isOpen}
-      onClose={onClose}
-      fullWidth
-      maxWidth="sm"
-    >
+    <Dialog classes={{ paper: classes.dialogPaper }} open={isOpen} onClose={onClose} fullWidth maxWidth="sm">
       <CardHeader
         action={
           <IconButton aria-label="close" onClick={onClose}>
@@ -191,11 +172,7 @@ function CreateOrEditGroup({ isOpen, onClose, onSuccess, group, shopId }) {
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Box>
-          <Button
-            onClick={onClose}
-          >
-            {i18next.t("app.cancel")}
-          </Button>
+          <Button onClick={onClose}>{i18next.t("app.cancel")}</Button>
         </Box>
         <Button
           color="primary"
@@ -204,7 +181,7 @@ function CreateOrEditGroup({ isOpen, onClose, onSuccess, group, shopId }) {
           onClick={handleSubmit}
           type="submit"
         >
-          {isSubmitting ? i18next.t("app.settings.saveProcessing") : i18next.t("app.saveChanges")}
+          {isSubmitting ? i18next.t("admin.settings.saveProcessing") : i18next.t("app.saveChanges")}
         </Button>
       </CardActions>
     </Dialog>

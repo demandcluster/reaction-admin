@@ -10,16 +10,7 @@ import useReactoForm from "reacto-form/cjs/useReactoForm";
 import muiOptions from "reacto-form/cjs/muiOptions";
 import { useMutation } from "@apollo/react-hooks";
 import { useSnackbar } from "notistack";
-import {
-  Box,
-  Grid,
-  CardActions,
-  CardHeader,
-  CardContent,
-  Dialog,
-  IconButton,
-  makeStyles
-} from "@material-ui/core";
+import { Box, Grid, CardActions, CardHeader, CardContent, Dialog, IconButton, makeStyles } from "@material-ui/core";
 import inviteShopMemberMutation from "../graphql/mutations/inviteShopMember";
 
 const useStyles = makeStyles((theme) => ({
@@ -76,13 +67,7 @@ function InviteShopMember({ isOpen, onClose, onSuccess, groups, shopId }) {
     }
   });
 
-  const {
-    getFirstErrorMessage,
-    getInputProps,
-    hasErrors,
-    isDirty,
-    submitForm
-  } = useReactoForm({
+  const { getFirstErrorMessage, getInputProps, hasErrors, isDirty, submitForm } = useReactoForm({
     async onSubmit(formData) {
       setIsSubmitting(true);
 
@@ -112,13 +97,7 @@ function InviteShopMember({ isOpen, onClose, onSuccess, groups, shopId }) {
   const groupsForSelect = groups.map((group) => ({ value: group._id, label: group.name }));
 
   return (
-    <Dialog
-      classes={{ paper: classes.dialogPaper }}
-      open={isOpen}
-      onClose={onClose}
-      fullWidth
-      maxWidth="sm"
-    >
+    <Dialog classes={{ paper: classes.dialogPaper }} open={isOpen} onClose={onClose} fullWidth maxWidth="sm">
       <CardHeader
         action={
           <IconButton aria-label="close" onClick={onClose}>
@@ -160,11 +139,7 @@ function InviteShopMember({ isOpen, onClose, onSuccess, groups, shopId }) {
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Box>
-          <Button
-            onClick={onClose}
-          >
-            {i18next.t("app.cancel")}
-          </Button>
+          <Button onClick={onClose}>{i18next.t("app.cancel")}</Button>
         </Box>
         <Button
           color="primary"
@@ -173,7 +148,7 @@ function InviteShopMember({ isOpen, onClose, onSuccess, groups, shopId }) {
           onClick={handleSubmit}
           type="submit"
         >
-          {isSubmitting ? i18next.t("app.settings.saveProcessing") : i18next.t("app.saveChanges")}
+          {isSubmitting ? i18next.t("admin.settings.saveProcessing") : i18next.t("app.saveChanges")}
         </Button>
       </CardActions>
     </Dialog>

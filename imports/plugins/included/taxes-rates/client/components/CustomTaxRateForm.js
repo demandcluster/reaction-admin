@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const sourcingOptions = ["destination","origin"];
+const sourcingOptions = ["destination", "origin"];
 
 const formSchema = new SimpleSchema({
   country: {
@@ -137,12 +137,7 @@ export default function CustomTaxRateForm(props) {
     }
   });
 
-  const {
-    getFirstErrorMessage,
-    getInputProps,
-    hasErrors,
-    submitForm
-  } = useReactoForm({
+  const { getFirstErrorMessage, getInputProps, hasErrors, submitForm } = useReactoForm({
     async onSubmit(formData) {
       setIsSubmitting(true);
 
@@ -311,7 +306,7 @@ export default function CustomTaxRateForm(props) {
         ))}
       </TextField>
       <Grid className={classes.rightAlignedGrid} item xs={12}>
-        {!!doc &&
+        {!!doc && (
           <Button
             className={classes.deleteButton}
             color="primary"
@@ -329,13 +324,9 @@ export default function CustomTaxRateForm(props) {
             variant="contained"
           >
             {i18next.t("app.delete")}
-          </Button>}
-        <Button
-          color="primary"
-          isDisabled={isSubmitting}
-          onClick={submitForm}
-          variant="contained"
-        >
+          </Button>
+        )}
+        <Button color="primary" isDisabled={isSubmitting} onClick={submitForm} variant="contained">
           {i18next.t("app.save")}
         </Button>
       </Grid>
@@ -368,8 +359,10 @@ CustomTaxRateForm.propTypes = {
    * Optional list of all defined tax codes. If provided,
    * the "tax code" field will be a Select instead
    */
-  taxCodes: PropTypes.arrayOf(PropTypes.shape({
-    code: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired
-  }))
+  taxCodes: PropTypes.arrayOf(
+    PropTypes.shape({
+      code: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    })
+  )
 };

@@ -1,15 +1,91 @@
+# v3.0.0-beta.11
+
+This is the 11th beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+
+## Features
+
+- feat: Add NPR currency definition ([#332](https://github.com/reactioncommerce/reaction-admin/pull/332))
+- feat: Allow the Invitations table to show invitations for all shops ([#331](https://github.com/reactioncommerce/reaction-admin/pull/331))
+- feat: Add shouldShowSidebarLink to registerOperatorRoute ([#329](https://github.com/reactioncommerce/reaction-admin/pull/329))
+
+## Fixes
+
+- fix: Correct "processing changes" translation name ([#333](https://github.com/reactioncommerce/reaction-admin/pull/333))
+- fix: import missing function ([#315](https://github.com/reactioncommerce/reaction-admin/pull/315))
+- fix: make compareAtPrice optional in form schema ([#322](https://github.com/reactioncommerce/reaction-admin/pull/322))
+- fix: hide sidebar on new-shop page ([#327](https://github.com/reactioncommerce/reaction-admin/pull/327))
+- fix: shop selector blank on page load ([#328](https://github.com/reactioncommerce/reaction-admin/pull/328))
+
+## Chores
+
+- chore: don't use querystring arg for shop type ([#326](https://github.com/reactioncommerce/reaction-admin/pull/326))
+
+## Contributors
+
+Thanks to @Manizuca, @dineshdb, @loan-laux and @CristianCucunuba for contributing to this release! 🎉
+
+# v3.0.0-beta.10
+
+This is the 10th beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+
+### Features
+
+- feat: Add global shop selector for multi-shop usage ([#297](https://github.com/reactioncommerce/reaction-admin/pull/297))
+
+### Chores
+
+- chore: update to Meteor 1.11.1 ([#323](https://github.com/reactioncommerce/reaction-admin/pull/323))
+- chore: remove dead code ([#317](https://github.com/reactioncommerce/reaction-admin/pull/317))
+
+## Contributors
+
+Thanks to @loan-laux for contributing to this release! 🎉
+
+# v3.0.0-beta.9
+
+This is the ninth beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+
+### Features
+
+- feat: Enable mock TLS termination on calls to Hydra ([#302](https://github.com/reactioncommerce/reaction-admin/pull/302))
+
+### Fixes
+
+- fix: Update defaultParcelSize only when it exists ([#295](https://github.com/reactioncommerce/reaction-admin/pull/295))
+- fix: Reaction.hasPermission method shopId ([#298](https://github.com/reactioncommerce/reaction-admin/pull/298))
+
+## Contributors
+
+Thanks to @manizuca and @mikoscz for contributing to this release! 🎉
+
+# v3.0.0-beta.8
+
+This is the eighth beta release of the Reaction Admin project that is designed to work with our new Reaction API.
+
+### Features
+
+- feat: Added GraphQL-powered accounts page ([#276](https://github.com/reactioncommerce/reaction-admin/pull/276))
+
+### Fixes
+
+- fix: Set empty tax fields to null ([#258](https://github.com/reactioncommerce/reaction-admin/pull/258))
+
+## Contributors
+
+Thanks to @loan-laux and @derBretti for contributing to this release! 🎉
+
 # v3.0.0-beta.7
 
 This is the seventh beta release of the Reaction Admin project that is designed to work with our new Reaction API.
 
 ### Refactors
 
-refactor: de-meteorize discount codes view ([#255](http://github.com/reactioncommerce/reaction-admin/pull/255))
+- refactor: de-meteorize discount codes view ([#255](http://github.com/reactioncommerce/reaction-admin/pull/255))
 
 ### Fixes
 
-fix: navigation tree not showing up ([#278](http://github.com/reactioncommerce/reaction-admin/pull/278))
-fix: use network-only fetchPolicy for tag table ([#254](http://github.com/reactioncommerce/reaction-admin/pull/254))
+- fix: navigation tree not showing up ([#278](http://github.com/reactioncommerce/reaction-admin/pull/278))
+- fix: use network-only fetchPolicy for tag table ([#254](http://github.com/reactioncommerce/reaction-admin/pull/254))
 
 ## Contributors
 
