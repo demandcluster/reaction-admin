@@ -48,7 +48,7 @@ function ProductMediaItem(props) {
   if (imageSrc === String(null)) return null;
 
   if (imageSrc) {
-    imageSrc = `${imageSrc}`;
+    imageSrc = `${filesBaseUrl}${imageSrc}`;
   } else {
     imageSrc = defaultSource;
   }

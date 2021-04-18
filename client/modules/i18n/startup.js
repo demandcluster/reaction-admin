@@ -15,6 +15,8 @@ import i18next, { getLabelsFor, getValidationErrorMessages, i18nextDep } from ".
 
 const { i18nBaseUrl } = Meteor.settings.public;
 
+// Keep track of current langage.
+let currentLanguage = null;
 const configuredI18next = i18next
   // https://github.com/i18next/i18next-browser-languageDetector
   // Sets initial language to load based on `lng` query string
@@ -90,7 +92,6 @@ async function initializeI18n(fallbackLng) {
     }
   }
 
-
   // apply language direction to html
   if (i18next.dir() === "rtl") {
     $("html").addClass("rtl");
@@ -107,9 +108,12 @@ Meteor.startup(() => {
   Tracker.autorun(() => {
     const shopId = Reaction.getPrimaryShopId();
     const shop = shopId && Shops.findOne({ _id: shopId });
-    const shopLanguage = (shop && shop.language) || null;
-
-    initializeI18n(shopLanguage || "en");
+    const shopLanguage = (shop && shop.language) || "en";
+    // Only need to re-initialize if the language was switched
+    if (shopLanguage !== currentLanguage) {
+      currentLanguage = shopLanguage;
+      initializeI18n(shopLanguage);
+    }
   });
 
   //
@@ -127,12 +131,14 @@ Meteor.startup(() => {
   // global onRendered event finds and replaces
   // data-i18n attributes in html/template source.
   // uses methods from i18nextJquery
-  Template.onRendered(function () {
-    this.autorun((function () {
-      return function () {
-        i18nextDep.depend();
-        $("[data-i18n]").localize();
-      };
-    })(this));
+  Template.onRendered(function() {
+    this.autorun(
+      (function() {
+        return function() {
+          i18nextDep.depend();
+          $("[data-i18n]").localize();
+        };
+      })(this)
+    );
   });
 });

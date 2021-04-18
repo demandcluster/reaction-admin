@@ -30,6 +30,7 @@ export default envalid.cleanEnv(process.env, {
     example: "ws://localhost:3000/graphql"
   }),
   PUBLIC_FILES_BASE_URL: str({
+    default: "https://api.demandcluster.com",
     desc: "A URL that has /assets/files and /assets/uploads endpoints for uploading and downloading files",
     example: "http://localhost:3000"
   }),
