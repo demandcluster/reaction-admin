@@ -12,9 +12,10 @@ stages:
       KUBECTL_ACTION: replace
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
+      PLUGIN_BUILD_ARGS: gh_token=3dc1bec578c5cb04579452c6db8e080a8e3449ad
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
     - sourceName: cicd
-      sourceKey: GITHUB_TOKEN
+      sourceKey: GITHUB_TOKEN 
 timeout: 60
