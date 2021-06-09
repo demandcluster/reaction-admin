@@ -46,6 +46,8 @@ RUN npm i -g npm@latest
 
 WORKDIR /usr/local/src/app/programs/server/
 
+RUN npm install --prefix /imports/plugins/custom @demandcluster/reaction-demandcluster:latest
+
 RUN npm install --production --no-audit
 
 
