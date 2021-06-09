@@ -14,6 +14,9 @@ RUN mkdir -p "$APP_SOURCE_DIR" \
 
 COPY --chown=node . $APP_SOURCE_DIR
 
+ARG gh_token
+ENV GITHUB_TOKEN=$gh_token
+
 WORKDIR $APP_SOURCE_DIR
 
 USER node
