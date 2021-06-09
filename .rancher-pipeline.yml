@@ -15,5 +15,6 @@ stages:
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
+    - sourceName: cicd
+      sourceKey: GITHUB_TOKEN
 timeout: 60
-notifications: {}
