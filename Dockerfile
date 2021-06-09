@@ -21,9 +21,6 @@ WORKDIR $APP_SOURCE_DIR
 
 USER node
 
-ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ==
-RUN npm set registry https://npm.demandcluster.com
-
 RUN npm install --no-audit
 
 RUN node --experimental-modules ./.reaction/scripts/build.mjs
@@ -49,10 +46,7 @@ RUN npm i -g npm@latest
 
 WORKDIR /usr/local/src/app/programs/server/
 
-RUN npm set registry https://npm.demandcluster.com
-
 RUN npm install --production --no-audit
-
 
 # Also install mongodb pkg needed by the waitForMongo script
 RUN npm install -E --no-save mongodb@3.5.7
