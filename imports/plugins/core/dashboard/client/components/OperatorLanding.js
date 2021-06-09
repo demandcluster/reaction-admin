@@ -31,7 +31,7 @@ function OperatorLanding() {
 
   return (
     <Fragment>
-      <Helmet title="Demand Admin" />
+      <Helmet title="DemandCluster" />
       <Grid container direction="column" justify="center" alignItems="center" spacing={5}>
         <Grid item />
         <Grid item>
@@ -41,7 +41,7 @@ function OperatorLanding() {
         <Grid item>
           <Typography align="center" variant="body1">
             {/* eslint-disable-next-line max-len */}
-            Use Reaction Admin to manage <Link to={`/${shopId}/orders`}>Orders</Link>,{" "}
+            Use DemandCluster Admin to manage <Link to={`/${shopId}/orders`}>Orders</Link>,{" "}
             <Link to={`/${shopId}/products`}>Products</Link>, <Link to={`/${shopId}/tags`}>Tags</Link>,{" "}
             <Link to={`/${shopId}/accounts`}>Accounts</Link>, and <Link to={`/${shopId}/navigation`}>Navigation</Link>,
             or change shop settings.

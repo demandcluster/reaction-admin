@@ -13,7 +13,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { withComponents } from "@reactioncommerce/components-context";
 import useCurrentShopId from "/imports/client/ui/hooks/useCurrentShopId";
 
-const defaultLogo = "/resources/reaction-logo-circular.svg";
+const defaultLogo = "https://static.demandcluster.com/images/logo.svg";
+const textLogo  = "https://static.demandcluster.com/images/demandtext.svg";
 
 const styles = (theme) => ({
   root: {
@@ -81,7 +82,7 @@ function ShopSelectorWithData({ className, classes, shouldShowShopName, linkTo, 
         to={linkTo}
       >
         <img
-          alt="Reaction Commerce"
+          alt="DEMANDCLUSTER"
           className={classes.logo}
           src={defaultLogo}
           width={size}
@@ -92,7 +93,8 @@ function ShopSelectorWithData({ className, classes, shouldShowShopName, linkTo, 
           component="span"
           variant="h3"
         >
-          Reaction Commerce
+	DemandCluster
+        
         </Typography>
         }
       </Link>
