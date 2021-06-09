@@ -20,8 +20,6 @@ USER node
 ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ==
 RUN npm set registry https://npm.demandcluster.com
 
-RUN git submodule init
-RUN git submodule update
 
 RUN npm install --no-audit
 
