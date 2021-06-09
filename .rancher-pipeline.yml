@@ -1,21 +1,23 @@
 stages:
 - name: Publish
   steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: |-
+        git clone https://DemandDevOps:$GITHUB_TOKEN@github.com/demandcluster/reaction-demandcluster.git/ ./imports/plugins/custom/reaction-demandcluster
+        cd ./imports/plugins/custom/reaction-demandcluster
+        npm install
+    envFrom:
+    - sourceName: cicd
+      sourceKey: DEVOPS_TOKEN
+      targetKey: GITHUB_TOKEN
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: demandcluster/admin:staging
       pushRemote: true
       registry: harbor.demandcluster.com
-    env:
-      HOME: /home/jenkins
-      KUBECTL_ACTION: replace
-      NPM_CONFIG_CACHE: /home/jenkins/.npm
-      NPM_USER: demandcluster
-      PLUGIN_BUILD_ARGS: gh_token=3dc1bec578c5cb04579452c6db8e080a8e3449ad
-    envFrom:
-    - sourceName: cicd
-      sourceKey: NPM_TOKEN
-    - sourceName: cicd
-      sourceKey: GITHUB_TOKEN
 timeout: 60
+notification: {}
