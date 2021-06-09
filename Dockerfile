@@ -49,8 +49,6 @@ WORKDIR /usr/local/src/app/programs/server/
 
 RUN npm set registry https://npm.demandcluster.com
 
-RUN npm install --prefix ./imports/plugins/custom @demandcluster/reaction-demandcluster:latest
-
 RUN npm install --production --no-audit
 
 
