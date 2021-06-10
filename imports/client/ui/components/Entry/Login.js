@@ -10,6 +10,7 @@ import red from "@material-ui/core/colors/red";
 import getAccountsHandler from "../../../../../lib/accountsServer";
 import hashPassword from "../../../../../lib/utils/hashPassword";
 
+const defaultLogo = "https://static.demandcluster.com/images/logo.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(1)
     }
+  },
+  logo: {
+    marginRight: theme.spacing(2)
   },
   forgotPassword: {
     textDecoration: "underline",
@@ -87,7 +91,12 @@ export default function Login(props) {
   };
   return (
     <form className={classes.root} noValidate>
-      <h1>Sign in to your account</h1>
+      <h4><img
+        alt="DEMANDCLUSTER"
+        className={classes.logo}
+        src={defaultLogo}
+        width={35}
+      />Sign in to your account</h4>
       <FormControl>
         <InputLabel htmlFor="email">Email</InputLabel>
         <Input id="email" aria-describedby="email-address" onChange={handleEmailChange} value={email}
