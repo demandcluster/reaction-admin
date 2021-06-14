@@ -37,5 +37,9 @@ export default envalid.cleanEnv(process.env, {
   ROOT_URL: str({
     desc: "The canonical root URL for the Demand Admin server",
     example: "http://localhost:4080"
-  })
-});
+  }),
+  DC_RELEASE: str({
+    desc: "DemandCluster Release",
+    example: "1.0.0-dev"
+})
+}
