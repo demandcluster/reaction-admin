@@ -41,5 +41,5 @@ export default envalid.cleanEnv(process.env, {
   DC_RELEASE: str({
     desc: "DemandCluster Release",
     example: "1.0.0-dev"
-})
-}
+  })
+});
