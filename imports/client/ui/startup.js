@@ -48,6 +48,7 @@ Sentry.init({
   // of transactions for performance monitoring.
   // We recommend adjusting this value in production
   tracesSampleRate: 1.0,
+  crossorigin: "anonymous",
 });
 
     if (primaryShopSub.ready()) {
