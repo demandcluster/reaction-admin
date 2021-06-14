@@ -20,6 +20,8 @@ import App from "./layouts/App";
 import getRootNode from "./utils/getRootNode";
 import RouterContext from "./context/RouterContext";
 import snackbarPosition from "./utils/getSnackbarPosition";
+import * as Sentry from "@sentry/react";
+import { Integrations } from "@sentry/tracing";
 
 Meteor.startup(() => {
   loadRegisteredBlocks();
@@ -29,6 +31,17 @@ Meteor.startup(() => {
 
   Tracker.autorun((computation) => {
     const primaryShopSub = Meteor.subscribe("PrimaryShop");
+
+// sentry.io integration
+Sentry.init({
+  dsn: "https://42a10625f320466bb7d877df8faa5cb7@o849206.ingest.sentry.io/5816058",
+  integrations: [new Integrations.BrowserTracing()],
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
+});
 
     if (primaryShopSub.ready()) {
       ReactDOM.render(
