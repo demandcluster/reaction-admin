@@ -36,8 +36,9 @@ BrowserPolicy.content.allowConnectOrigin(`wss://${parsedUrl.hostname}`);
 BrowserPolicy.content.allowOriginForAll("*.demandcluster.com");
 
 BrowserPolicy.content.allowOriginForAll("*.sentry.io");
+BrowserPolicy.content.allowOriginForAll("sentry.io");
 BrowserPolicy.content.allowOriginForAll("browser.sentry-cdn.com");
-BrowserPolicy.content.allowOriginForAll("o849206.ingest.sentry.io");
+BrowserPolicy.content.allowScriptOrigin("o849206.ingest.sentry.io");
 
 BrowserPolicy.content.allowOriginForAll("*.facebook.com");
 BrowserPolicy.content.allowOriginForAll("*.fbcdn.net");
