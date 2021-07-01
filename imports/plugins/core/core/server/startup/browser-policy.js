@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === "development") {
   BrowserPolicy.content.allowConnectOrigin("http://localhost:*");
   BrowserPolicy.content.allowConnectOrigin("https://localhost:*");
   BrowserPolicy.framing.allowAll();
+ 
   // Allow images from anywhere http
   BrowserPolicy.content.allowImageOrigin("http://*");
 }
@@ -33,6 +34,11 @@ const parsedUrl = new URL(config.ROOT_URL);
 BrowserPolicy.content.allowConnectOrigin(`ws://${parsedUrl.hostname}`);
 BrowserPolicy.content.allowConnectOrigin(`wss://${parsedUrl.hostname}`);
 BrowserPolicy.content.allowOriginForAll("*.demandcluster.com");
+
+BrowserPolicy.content.allowOriginForAll("*.sentry.io");
+BrowserPolicy.content.allowOriginForAll("sentry.io");
+BrowserPolicy.content.allowOriginForAll("browser.sentry-cdn.com");
+BrowserPolicy.content.allowScriptOrigin("o849206.ingest.sentry.io");
 
 BrowserPolicy.content.allowOriginForAll("*.facebook.com");
 BrowserPolicy.content.allowOriginForAll("*.fbcdn.net");
