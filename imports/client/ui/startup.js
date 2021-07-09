@@ -37,17 +37,17 @@ Sentry.init({
   dsn: "https://42a10625f320466bb7d877df8faa5cb7@o849206.ingest.sentry.io/5816058",
   integrations: [new Integrations.BrowserTracing()],
   release: "@demandcluster-admin:"+process.env.DC_RELEASE,
-  beforeSend(event, hint) {
+  //beforeSend(event, hint) {
       // Check if it is an exception, and if so, show the report dialog
-      if (event.exception) {
-        Sentry.showReportDialog({ eventId: event.event_id,subtitle:"The DemandCluster team has been notified." });
-      }
-      return event;
-    },
+  //    if (event.exception) {
+  //      Sentry.showReportDialog({ eventId: event.event_id,subtitle:"The DemandCluster team has been notified." });
+  //    }
+  //    return event;
+  //  },
   // Set tracesSampleRate to 1.0 to capture 100%
   // of transactions for performance monitoring.
   // We recommend adjusting this value in production
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.5,
   crossorigin: "anonymous",
 });
 
