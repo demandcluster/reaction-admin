@@ -90,11 +90,11 @@ export default function EmailTemplateForm(props) {
   useEffect(() => {
     if (props.emailTemplate && props.emailTemplate.template !== template) {
       setTemplate(props.emailTemplate.template);
-
-      let bodyHtml = /<body.*?>([\s\S]*)<\/body>/.exec(props.emailTemplate.template)[1];
-      bodyHtml = bodyHtml.replaceAll(/\<\!--.*-->/g, "");
+      console.log("raw html", props.emailTemplate.template);
+      let bodyHtml = props.emailTemplate.template; // /<body.*?>([\s\S]*)<\/body>/.exec(props.emailTemplate.template)[1];
+      // bodyHtml = bodyHtml.replaceAll(/\<\!--.*-->/g, "");
       //  bodyHtml = bodyHtml.replaceAll(/{{.*}}/g, "");
-      const finalHtml = `<body>${bodyHtml}</body>`;
+      const finalHtml = bodyHtml; //`<body>${bodyHtml}</body>`;
       //console.log(finalHtml);
       const templateDraft = getTemplate(finalHtml);
       console.log("drafting", templateDraft);
